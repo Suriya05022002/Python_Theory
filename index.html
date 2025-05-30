@@ -1,0 +1,2617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Python Programming Notes</title>
+       <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+   
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>Python Tutorial</h2>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#variables" class="nav-link">Variables</a></li>
+                <li><a href="#data-types" class="nav-link">Datatypes</a></li>
+                <li><a href="#operators" class="nav-link">Operators</a></li>
+                <li><a href="#conditionals" class="nav-link">Conditionals</a></li>
+                <li><a href="#loops" class="nav-link">Loops</a></li>
+                <li><a href="#functions" class="nav-link">Functions</a></li>
+                <li><a href="#data-structures" class="nav-link">DataStructures</a></li>
+                <li><a href="#strings" class="nav-link">Strings</a></li>
+                <li><a href="#oops" class="nav-link">OOPs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h3>Table of Contents</h3>
+               
+                <ul class="toc">
+                    <li><a href="#introduction">Introduction to Python</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#data-types">Data Types</a></li>
+                    <li><a href="#type-conversion">Type conversions</a></li>
+                    <li><a href="#input-output">Input() Function</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#conditionals">Conditional Statements</a></li>
+                    <li><a href="#operators">Operators and types in python</a></li>
+                    <li><a href="#loops">Loops in Python</a></li>
+                    <li><a href="#nested-loops">Nested Loops</a></li>
+                    <li><a href="#break-continue">Break & Continue Statements</a></li>
+                    <li><a href="#for-loops">Range() in python</a></li>
+                    <li><a href="#functions">Functions in Python</a></li>
+                    <li><a href="#function-arguments">Arguments of a python</a></li>
+                    <li><a href="#arguments-types">Arguments types</a></li>
+                    <li><a href="#return-statements">Return Statements</a></li>
+                    <li><a href="#lists">Lists & List Methods</a></li>
+                    <li><a href="#sets">Sets in Python</a></li>
+                    <li><a href="#dictionaries">Dictionaries & methods</a></li>
+                    <li><a href="#tuples">Tuples</a></li>
+                    <li><a href="#strings">String Operations</a></li>
+                    <li><a href="#list-comprehensions">List Comprehensions</a></li>
+                    <li><a href="#oop">Object-Oriented Programming</a></li>
+                    <li><a href="#classes-objects">Classes & Objects</a></li>
+                    <li><a href="#inheritance">Inheritance</a></li>
+                    <li><a href="#polymorphism">Polymorphism</a></li>
+                    <li><a href="#encapsulation">Encapsulation</a></li>
+                    <li><a href="#abstraction">Abstraction</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Introduction Section -->
+            <section id="introduction" class="section">
+                <h2>Introduction to Python</h2>
+                <div class="content-card">
+                    <p>Python is a high-level, general-purpose, and very popular programming language. It is being used in web development, Machine Learning applications, etc.</p>
+                     <ul>
+                        <li>High-level programs are generally smaller than other programming languages.</li>
+                        <li>Programmers have to type relatively less and the administrative requirements of the language makes fewer modules all the time.</li>
+                    </ul>
+                    
+                    <h3>Why Python?</h3>
+                    <ul>
+                        <li>Very simple syntax & easy to learn</li>
+                        <div class="example-box">
+                        <h4>Your First Python Program</h4>
+                        <pre><code class="language-python">print("Hello, World!")</code></pre>
+                        <div class="output">Output: Hello, World!</div>
+                    </div>
+                        <li>General purpose language (Simple yet very powerful language)</li>
+                        <li>Console Application & Scripts</li>
+                        <li>Desktop Application</li>
+                        <li>Web Application</li>
+                        <li>Game Development</li>
+                        <li>Machine Learning, Deep learning, AI, Big data etc</li>
+                    </ul>
+
+                  
+
+                    <h3>Multi-paradigm Support</h3>
+                    <ul>
+                        <li>Procedural Style Programming (like C)</li>
+                        <li>Object-Oriented Programming (like Java)</li>
+                        <li>Functional Programming (like LISP)</li>
+                    </ul>
+
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Portable:</strong> Platform Independent</li>
+                        <li><strong>Dynamically Typed:</strong> No need to specify variable types</li>
+                        <li><strong>Automatic Garbage Collection:</strong> Memory management handled automatically</li>
+                    </ul>
+
+                    <h3>Popular Applications Built in Python</h3>
+                    <p>YouTube, Netflix, Quora, Instagram, Dropbox.</p>
+                </div>
+            </section>
+
+            <!-- Variables Section -->
+            <section id="variables" class="section">
+                <h2>Variables in Python</h2>
+                <div class="content-card">
+                    <p>A variable is a name that is used to refer to memory location. Python variable is also known as an identifier.</p>
+                    
+                    <h3>Key Points:</h3>
+                    <ul>
+                        <li>In Python, we don't need to specify the type of variable because Python is smart enough to get variable type</li>
+                        <li>Python is dynamically typed</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Basic Variable Example:</h4>
+                        <pre><code class="language-python">price = 100
+tax = 18
+total = price + tax
+print(total)</code></pre>
+                        <div class="output">Output: 118</div>
+                    </div>
+
+                    <h3>Python is Dynamically Typed</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">x = 10
+print(x)
+x = "geeks"
+print(x)</code></pre>
+                        <div class="output">Output: 
+10
+geeks</div>
+                    </div>
+
+                    <h3>Variable Naming Rules</h3>
+                    <ul>
+                        <li>Variable names must start with a letter or underscore</li>
+                        <li>Cannot start with a number</li>
+                        <li>Can contain letters, numbers, and underscores</li>
+                        <li>Case-sensitive (age and Age are different)</li>
+                        <li>Cannot use Python keywords</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Data Types Section -->
+            <section id="data-types" class="section">
+                <h2>Data Types in Python</h2>
+                <div class="content-card">
+                    <h3>Built-in Data Types</h3>
+                    <p>Python has several built-in data types to store different kinds of data:</p>
+                    
+                    <ul>
+                        <li><strong>int:</strong> Integer numbers (e.g., 5, -3, 100)</li>
+                        <li><strong>float:</strong> Decimal numbers (e.g., 3.14, -2.5)</li>
+                        <li><strong>str:</strong> Text data (e.g., "Hello", 'Python')</li>
+                        <li><strong>bool:</strong> Boolean values (True or False)</li>
+                        <li><strong>list:</strong> Ordered collection of items</li>
+                        <li><strong>tuple:</strong> Immutable ordered collection</li>
+                        <li><strong>dict:</strong> Key-value pairs</li>
+                        <li><strong>set:</strong> Unordered collection of unique items</li>
+                    </ul>
+
+                    <h3>Type() Function</h3>
+                    <p>Type() is a built-in function that tells you data type of a variable or a value.</p>
+
+                    <div class="example-box">
+                        <pre><code class="language-python">a = 10
+b = 10.5
+c = 2+3j
+d = "Hello"
+e = True
+
+print(type(a))    # int
+print(type(b))    # float
+print(type(c))    # complex
+print(type(d))    # str
+print(type(e))    # bool</code></pre>
+                        <div class="output">Output:
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'complex'&gt;
+&lt;class 'str'&gt;
+&lt;class 'bool'&gt;</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Type Conversion Section -->
+            <section id="type-conversion" class="section">
+                <h2>Type Conversions in Python</h2>
+                <div class="content-card">
+                    <h3>Types of Type Conversion</h3>
+                    
+                    <h4>1. Implicit Type Conversion</h4>
+                    <p>Python automatically converts one data type to another when needed.</p>
+                    
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">num_int = 123
+num_float = 1.23
+
+num_new = num_int + num_float
+
+print("datatype of num_int:", type(num_int))
+print("datatype of num_float:", type(num_float))
+print("Value of num_new:", num_new)
+print("datatype of num_new:", type(num_new))</code></pre>
+                        <div class="output">Output:
+datatype of num_int: &lt;class 'int'&gt;
+datatype of num_float: &lt;class 'float'&gt;
+Value of num_new: 124.23
+datatype of num_new: &lt;class 'float'&gt;</div>
+                    </div>
+
+                    <h4>2. Explicit Type Conversion</h4>
+                    <p>User converts the data type of an object to required data type using predefined functions.</p>
+                    
+                    <div class="example-box">
+                        <h4>Common Type Conversion Functions:</h4>
+                        <pre><code class="language-python"># String to Integer
+str_num = "123"
+int_num = int(str_num)
+print(int_num, type(int_num))
+
+# Integer to Float
+int_val = 10
+float_val = float(int_val)
+print(float_val, type(float_val))
+
+# Number to String
+num = 456
+str_val = str(num)
+print(str_val, type(str_val))
+
+# String to List
+text = "hello"
+list_val = list(text)
+print(list_val, type(list_val))</code></pre>
+                        <div class="output">Output:
+123 &lt;class 'int'&gt;
+10.0 &lt;class 'float'&gt;
+456 &lt;class 'str'&gt;
+['h', 'e', 'l', 'l', 'o'] &lt;class 'list'&gt;</div>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Note:</strong> Type conversion may not always be possible. For example, converting "hello" to int will raise a ValueError.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Input/Output Section -->
+            <section id="input-output" class="section">
+                <h2>Input() Function in Python</h2>
+                <div class="content-card">
+                    <p>This function is used to take input from the user.</p>
+
+                    <div class="example-box">
+                        <h4>Basic Input Example:</h4>
+                        <pre><code class="language-python">name = input("Enter the name: ")
+print("Welcome " + name)</code></pre>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            <span>Enter the name: <em>Shivani</em></span><br>
+                            <span>Welcome Shivani</span>
+                        </div>
+                    </div>
+
+                    <h3>Python Program for Addition</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">x = input("Enter First Number: ")
+y = input("Enter Second Number: ")
+x = int(x) 
+y = int(y)
+z = x + y
+print("Sum is", z)</code></pre>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            <span>Enter first number: <em>10</em></span><br>
+                            <span>Enter second number: <em>20</em></span><br>
+                            <span>Sum is: 30</span>
+                        </div>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Important:</strong> The input() function always returns a string. Convert it to the required data type using type conversion functions.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comments Section -->
+            <section id="comments" class="section">
+                <h2>Comments in Python</h2>
+                <div class="content-card">
+                    <p>Comments are used to describe the code during development. We might wish to take notes on why a section of code exists for future reference.</p>
+                    
+                    <h3>Types of Comments</h3>
+                    
+                    <h4>1. Single-line Comments</h4>
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python"># This is a single-line comment
+print("Hello, world!")  # This is also a comment</code></pre>
+                    </div>
+
+                    <h4>2. Multi-line Comments</h4>
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">"""
+This is a multi-line comment.
+It can span multiple lines.
+Useful for documentation or detailed explanations.
+"""
+print("This is a sample program")</code></pre>
+                    </div>
+
+                    <h4>3. Docstrings</h4>
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">def greet(name):
+    """
+    This function greets a person with their name.
+    
+    Args:
+        name (str): The name of the person to greet
+    
+    Returns:
+        str: A greeting message
+    """
+    return f"Hello, {name}!"</code></pre>
+                    </div>
+
+                    <p>In Python, multi-line comments are typically written using triple quotes (<code>'''</code> or <code>"""</code>) and must follow immediately after a definition to be used as documentation.</p>
+                </div>
+            </section>
+
+            <!-- Conditionals Section -->
+            <section id="conditionals" class="section">
+                <h2>Conditional Statements</h2>
+                <div class="content-card">
+                    <p>There come situations in real life when we need to make decisions based on certain conditions. Similarly, there comes a situation in programming where a specific task is to be performed if a specific condition is true.</p>
+                    
+                    <h3>Types of Conditional Statements:</h3>
+                    <ul>
+                        <li>if</li>
+                        <li>if-else</li>
+                        <li>nested if</li>
+                        <li>if-elif statements</li>
+                    </ul>
+
+                    <h3>If Statement</h3>
+                    <div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">if condition:           
+    # Statements to execute if condition is true</code></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">if 10 > 5:
+    print("10 is greater than 5")
+print("Program ended")</code></pre>
+                        <div class="output">Output:<br>
+10 is greater than 5<br>
+Program ended</div>
+                    </div>
+
+                    <h3>If-else Statement</h3>
+                    <div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">if condition:
+    # Statements inside body of if
+else:
+    # Statements inside body of else</code></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("The number is Even.")
+else:
+    print("The number is Odd.")</code></pre>
+                        <div class="output">
+                            Output: Enter a number: 7<br>
+                            The number is Odd.
+                        </div>
+                    </div>
+
+                    <h3>if-elif-else statement</h3>
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">letter = "A"
+if letter == "B":
+    print("letter is B")
+elif letter == "C":
+    print("letter is C")
+elif letter == "A":
+    print("letter is A")
+else:
+    print("letter isn't A, B or C")</code></pre>
+                        <div class="output">Output: letter is A</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Operators Section -->
+            <section id="operators" class="section">
+                <h2>Operators and Types in Python</h2>
+                <div class="content-card">
+                    <p>Operators are used to perform operations on values and variables. Python supports various types of operators.</p>
+
+                    <h3>1. Arithmetic Operators</h3>
+                    <div class="operators-grid">
+                        <div class="operator-card">
+                            <h4>Addition (+)</h4>
+                            <p>Adds two operands</p>
+                            <div class="example-box">
+                                <pre><code class="language-python">a = 5
+b = 3
+result = a + b
+print(result)  # Output: 8</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="operator-card">
+                            <h4>Subtraction (-)</h4>
+                            <p>Subtracts right operand from left</p>
+                            <div class="example-box">
+                                <pre><code class="language-python">a = 5
+b = 3
+result = a - b
+print(result)  # Output: 2</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="operator-card">
+                            <h4>Multiplication (*)</h4>
+                            <p>Multiplies two operands</p>
+                            <div class="example-box">
+                                <pre><code class="language-python">a = 5
+b = 3
+result = a * b
+print(result)  # Output: 15</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="operator-card">
+                            <h4>Division (/)</h4>
+                            <p>Divides left operand by right</p>
+                            <div class="example-box">
+                                <pre><code class="language-python">a = 6
+b = 3
+result = a / b
+print(result)  # Output: 2.0</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="operator-card">
+                            <h4>Floor Division (//)</h4>
+                            <p>Returns floor of the division</p>
+                            <div class="example-box">
+                                <pre><code class="language-python">a = 7
+b = 3
+result = a // b
+print(result)  # Output: 2</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="operator-card">
+                            <h4>Modulus (%)</h4>
+                            <p>Returns remainder of division</p>
+                            <div class="example-box">
+                                <pre><code class="language-python">a = 7
+b = 3
+result = a % b
+print(result)  # Output: 1</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="operator-card">
+                            <h4>Exponentiation (**)</h4>
+                            <p>Raises left operand to power of right</p>
+                            <div class="example-box">
+                                <pre><code class="language-python">a = 2
+b = 3
+result = a ** b
+print(result)  # Output: 8</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>2. Comparison Operators</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">a = 5
+b = 3
+
+print(a == b)  # Equal to: False
+print(a != b)  # Not equal to: True
+print(a > b)   # Greater than: True
+print(a < b)   # Less than: False
+print(a >= b)  # Greater than or equal to: True
+print(a <= b)  # Less than or equal to: False</code></pre>
+                    </div>
+
+                    <h3>3. Logical Operators</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">a = True
+b = False
+
+print(a and b)  # Logical AND: False
+print(a or b)   # Logical OR: True
+print(not a)    # Logical NOT: False</code></pre>
+                    </div>
+
+                    <h3>4. Assignment Operators</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">x = 5
+print(x)    # 5
+
+x += 3      # Same as x = x + 3
+print(x)    # 8
+
+x -= 2      # Same as x = x - 2
+print(x)    # 6
+
+x *= 2      # Same as x = x * 2
+print(x)    # 12
+
+x /= 3      # Same as x = x / 3
+print(x)    # 4.0</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loops Section -->
+            <section id="loops" class="section">
+                <h2>Loops in Python</h2>
+                <div class="content-card">
+                    <h3>1. While Loop</h3>
+                    <p>It is used to execute a block of statements repeatedly until a given condition is satisfied.</p>
+
+                    <div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">while condition:
+    # statements to be executed</code></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">count = 0
+while count < 5:
+    print("Hello Geek")
+    count = count + 1</code></pre>
+                        <div class="output">Output:
+Hello Geek
+Hello Geek
+Hello Geek
+Hello Geek
+Hello Geek</div>
+                    </div>
+
+                    <h3>2. For Loop</h3>
+                    <p>It is used for sequential traversal i.e., it is used for iterating over an iterable like String, Tuple, List, Set or Dictionary.</p>
+
+                    <div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">for variable in iterable:
+    # statements to be executed</code></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)</code></pre>
+                        <div class="output">Output:
+apple
+banana
+cherry</div>
+                    </div>
+
+                    <h3>3. Range() Function</h3>
+                    <p>Python range() is a built-in function that returns a sequence of numbers.</p>
+
+                    <div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">range(start, stop, step)</code></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Examples:</h4>
+                        <pre><code class="language-python"># range(stop)
+for i in range(5):
+    print(i, end=" ")
+print()  # Output: 0 1 2 3 4
+
+# range(start, stop)
+for i in range(2, 6):
+    print(i, end=" ")
+print()  # Output: 2 3 4 5
+
+# range(start, stop, step)
+for i in range(0, 10, 2):
+    print(i, end=" ")
+print()  # Output: 0 2 4 6 8</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nested Loops Section -->
+            <section id="nested-loops" class="section">
+                <h2>Nested Loops</h2>
+                <div class="content-card">
+                    <p>Nested loop means loops inside a loop. For example, while loop inside the for loop, for loop inside the for loop, etc.</p>
+
+                    <div class="example-box">
+                        <h4>Example - Multiplication Table:</h4>
+                        <pre><code class="language-python"># Running outer loop from 2 to 3
+for i in range(2, 4):
+    print(f"Multiplication table for {i}:")
+    # Running inner loop from 1 to 10
+    for j in range(1, 11):
+        print(f"{i} x {j} = {i * j}")
+    print()  # Add blank line</code></pre>
+                        <div class="output">Output: 
+Multiplication table for 2:
+2 x 1 = 2
+2 x 2 = 4
+...
+2 x 10 = 20
+
+Multiplication table for 3:
+3 x 1 = 3
+3 x 2 = 6
+...
+3 x 10 = 30</div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Pattern Example:</h4>
+                        <pre><code class="language-python"># Print a triangle pattern
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end=" ")
+    print()  # New line after each row</code></pre>
+                        <div class="output">Output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * *</div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Finding Prime Numbers:</h4>
+                        <pre><code class="language-python">for num in range(2, 11):
+    is_prime = True
+    for i in range(2, int(num/2) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(f"{num} is prime")
+    else:
+        print(f"{num} is not prime")</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Break and Continue Section -->
+            <section id="break-continue" class="section">
+                <h2>Break and Continue Statements</h2>
+                <div class="content-card">
+                    <h3>1. Break Statement</h3>
+                    <p>It is used to bring the control out of the loop when some external condition is triggered. Break statement terminates the current loop and resumes execution at the next statement.</p>
+
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">for i in range(10):
+    print(i)
+    if i == 2:
+        break</code></pre>
+                        <div class="output">Output: 
+0
+1
+2</div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example with String:</h4>
+                        <pre><code class="language-python">s = 'geeksforgeeks'
+for letter in s:
+    print(letter)
+    if letter == 'e':
+        break
+
+print("Out of for loop")</code></pre>
+                        <div class="output">Output: 
+g
+e
+Out of for loop</div>
+                    </div>
+
+                    <h3>2. Continue Statement</h3>
+                    <p>It is a loop control statement that forces to execute the next iteration of the loop. When the continue statement is encountered inside the loop, it skips the remaining statements in the current iteration.</p>
+
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">for val in "GeeksforGeeks":
+    if val == "s":
+        continue
+    print(val)</code></pre>
+                        <div class="output">Output: 
+G
+e
+e
+k
+f
+o
+r
+G
+e
+e
+k</div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Skip Even Numbers:</h4>
+                        <pre><code class="language-python">for i in range(1, 11):
+    if i % 2 == 0:
+        continue
+    print(i, end=" ")
+print()  # Output: 1 3 5 7 9</code></pre>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>NOTE:</strong> THE CONTINUE STATEMENT CAN BE USED WITH ANY OTHER LOOP ALSO LIKE "WHILE LOOP" SIMILARLY AS IT IS USED WITH "FOR LOOP" ABOVE.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Range Function Section -->
+            <section id="for-loops" class="section">
+                <h2>Range() Function in Python</h2>
+                <div class="content-card">
+                    <p>The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.</p>
+                    
+                    <h3>Syntax</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">range(start, stop, step)</code></pre>
+                    </div>
+                    
+                    <h3>Parameters</h3>
+                    <ul>
+                        <li><strong>start</strong> - (Optional) Starting number of the sequence. Default is 0</li>
+                        <li><strong>stop</strong> - (Required) Generate numbers up to, but not including this number</li>
+                        <li><strong>step</strong> - (Optional) Difference between each number in the sequence. Default is 1</li>
+                    </ul>
+                    
+                    <div class="example-box">
+                        <h4>Different Range Examples:</h4>
+                        <pre><code class="language-python"># Using range with only stop parameter
+print("range(5):")
+for i in range(5):
+    print(i, end=" ")
+print()  # Output: 0 1 2 3 4
+
+# Using range with start and stop parameters
+print("range(2, 8):")
+for i in range(2, 8):
+    print(i, end=" ")
+print()  # Output: 2 3 4 5 6 7
+
+# Using range with start, stop and step parameters
+print("range(2, 20, 3):")
+for i in range(2, 20, 3):
+    print(i, end=" ")
+print()  # Output: 2 5 8 11 14 17
+
+# Reverse range
+print("range(10, 0, -2):")
+for i in range(10, 0, -2):
+    print(i, end=" ")
+print()  # Output: 10 8 6 4 2</code></pre>
+                    </div>
+
+                    <h3>Converting Range to List</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">numbers = list(range(1, 6))
+print(numbers)  # Output: [1, 2, 3, 4, 5]
+
+even_numbers = list(range(0, 11, 2))
+print(even_numbers)  # Output: [0, 2, 4, 6, 8, 10]</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Functions Section -->
+            <section id="functions" class="section">
+                <h2>Functions in Python</h2>
+                <div class="content-card">
+                    <p>Python function is a block of statements that return the specific task. The idea is to put some commonly or repeatedly done task together and make a function so that instead of writing the same code again and again for different inputs, we can do the function calls to reuse code contained in it over and over again.</p>
+
+                    <h3>Function Syntax</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">def function_name(parameters):
+    """docstring"""
+    # body of the function
+    return expression</code></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Simple Function Example:</h4>
+                        <pre><code class="language-python">def greet():
+    print("Welcome to Python!")
+
+greet()  # Calling the function</code></pre>
+                        <div class="output">Output: Welcome to Python!</div>
+                    </div>
+
+                    <h3>Function with Parameters</h3>
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">def evenOdd(x):
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
+
+evenOdd(2)
+evenOdd(3)</code></pre>
+                        <div class="output">Output: 
+even
+odd</div>
+                    </div>
+
+                    <h3>Function with Return Statement</h3>
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">def square_value(num):
+    """This function returns the square value of the entered number"""
+    return num**2
+
+result1 = square_value(2)
+result2 = square_value(-4)
+print(result1)  # 4
+print(result2)  # 16</code></pre>
+                    </div>
+
+                    <h3>Function with Multiple Parameters</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">def add_numbers(a, b, c=0):
+    """Add two or three numbers"""
+    return a + b + c
+
+print(add_numbers(5, 3))        # 8
+print(add_numbers(5, 3, 2))     # 10</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Function Arguments Section -->
+            <section id="function-arguments" class="section">
+                <h2>Arguments of a Python Function</h2>
+                <div class="content-card">
+                    <p>Arguments are the values passed inside the parenthesis of the function. A function can have any number of arguments separated by a comma.</p>
+
+                    <div class="example-box">
+                        <h4>Example - A simple Python function to check whether x is even or odd:</h4>
+                        <pre><code class="language-python">def evenOdd(x):
+    if (x % 2 == 0):
+        print("even")
+    else:
+        print("odd")
+
+evenOdd(2)
+evenOdd(3)</code></pre>
+                        <div class="output">Output: 
+even
+odd</div>
+                    </div>
+
+                    <h3>Pass by Reference or pass by value</h3>
+                    <p>One important thing to note in Python, every variable name is a reference. When we pass a variable to a function, a new reference to the object is created.</p>
+                    
+                    <div class="example-box">
+                        <pre><code class="language-python">def myFun(x):
+    x[0] = 20
+
+# Driver Code (Note that lst is modified after function call)
+lst = [10, 11, 12, 13, 14, 15]
+myFun(lst)
+print(lst)</code></pre>
+                        <div class="output">Output: [20, 11, 12, 13, 14, 15]</div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Immutable Objects:</h4>
+                        <pre><code class="language-python">def modify_number(x):
+    x = 20
+    print("Inside function:", x)
+
+num = 10
+modify_number(num)
+print("Outside function:", num)</code></pre>
+                        <div class="output">Output:
+Inside function: 20
+Outside function: 10</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Arguments Types Section -->
+            <section id="arguments-types" class="section">
+                <h2>Arguments Types in Python</h2>
+                <div class="content-card">
+                    <h3>Types of Arguments:</h3>
+                    
+                    <h4>1. Default Arguments</h4>
+                    <p>It is a parameter that assumes a default value if no argument is provided in the function call for that argument.</p>
+                    
+                    <div class="example-box">
+                        <pre><code class="language-python">def myFun(x, y=50):
+    print("x: ", x)
+    print("y: ", y)
+
+myFun(10)
+myFun(10, 20)</code></pre>
+                        <div class="output">Output: 
+x: 10
+y: 50
+x: 10
+y: 20</div>
+                    </div>
+
+                    <h4>2. Keyword Arguments</h4>
+                    <p>The idea is to allow the caller to specify the argument name with values so that caller does not need to remember the order of parameters.</p>
+                    
+                    <div class="example-box">
+                        <pre><code class="language-python">def student(firstname, lastname):
+    print(firstname, lastname)
+
+student(firstname='Geeks', lastname='Practice')
+student(lastname='for', firstname='Geeks')</code></pre>
+                        <div class="output">Output: 
+Geeks Practice
+Geeks for</div>
+                    </div>
+
+                    <h4>3. Variable-length Arguments (*args)</h4>
+                    <p>We can have both normal and keyword arguments. There are two special symbols: *args (Non-keyword Arguments)</p>
+                    
+                    <div class="example-box">
+                        <pre><code class="language-python">def myFun(*argv):
+    for arg in argv:
+        print(arg)
+
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')</code></pre>
+                        <div class="output">Output:
+Hello
+Welcome
+to
+GeeksforGeeks</div>
+                    </div>
+
+                    <h4>4. Keyword Variable-length Arguments (**kwargs)</h4>
+                    <p>**kwargs allows you to pass keyworded variable length of arguments to a function.</p>
+                    
+                    <div class="example-box">
+                        <pre><code class="language-python">def myFun(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+myFun(first='Geeks', mid='for', last='Geeks')</code></pre>
+                        <div class="output">Output:
+first: Geeks
+mid: for
+last: Geeks</div>
+                    </div>
+
+                    <h4>5. Positional-only Arguments</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">def greet(name, /, greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+print(greet("Alice"))           # Hello, Alice!
+print(greet("Bob", "Hi"))       # Hi, Bob!
+# greet(name="Charlie")         # This would cause an error</code></pre>
+                    </div>
+
+                    <h4>6. Keyword-only Arguments</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">def create_profile(name, *, age, city):
+    return f"Name: {name}, Age: {age}, City: {city}"
+
+print(create_profile("Alice", age=30, city="New York"))
+# create_profile("Alice", 30, "New York")  # This would cause an error</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Return Statements Section -->
+            <section id="return-statements" class="section">
+                <h2>Return Statement in Python Function</h2>
+                <div class="content-card">
+                    <p>The function return statement is used to exit from a function and go back to the function caller and return the specified value or data item to the caller.</p>
+
+                    <div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">return [expression_list]</code></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">def square_value(num):
+    """This function returns the square value of the entered number"""
+    return num**2
+
+print(square_value(2))
+print(square_value(-4))</code></pre>
+                        <div class="output">Output: 
+4
+16</div>
+                    </div>
+
+                    <h3>Multiple Return Values</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">def calculate(a, b):
+    sum_result = a + b
+    diff_result = a - b
+    product_result = a * b
+    return sum_result, diff_result, product_result
+
+result = calculate(10, 5)
+print(result)  # (15, 5, 50)
+
+# Unpacking the returned values
+add, sub, mul = calculate(10, 5)
+print(f"Addition: {add}, Subtraction: {sub}, Multiplication: {mul}")</code></pre>
+                        <div class="output">Output:
+(15, 5, 50)
+Addition: 15, Subtraction: 5, Multiplication: 50</div>
+                    </div>
+
+                    <h3>Return with Conditional Statements</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">def check_grade(marks):
+    if marks >= 90:
+        return "A"
+    elif marks >= 80:
+        return "B"
+    elif marks >= 70:
+        return "C"
+    elif marks >= 60:
+        return "D"
+    else:
+        return "F"
+
+print(check_grade(85))  # B
+print(check_grade(92))  # A
+print(check_grade(55))  # F</code></pre>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Note:</strong> If no return statement is used, the function returns None by default.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lists Section -->
+            <section id="lists" class="section">
+                <h2>Lists & List Methods</h2>
+                <div class="content-card">
+                    <p>Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.</p>
+
+                    <h3>Creating a List</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Creating an empty list
+my_list = []
+print("Empty list:", my_list)
+
+# Creating a list with elements
+fruits = ["apple", "banana", "cherry"]
+print("Fruits list:", fruits)
+
+# Creating a list with mixed data types
+mixed_list = [1, "hello", 3.14, True]
+print("Mixed list:", mixed_list)</code></pre>
+                        <div class="output">Output: 
+Empty list: []
+Fruits list: ['apple', 'banana', 'cherry']
+Mixed list: [1, 'hello', 3.14, True]</div>
+                    </div>
+
+                    <h3>List Methods</h3>
+                    
+                    <h4>1. append() - Add an element to the end</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = ["apple", "banana"]
+fruits.append("orange")
+print(fruits)  # ['apple', 'banana', 'orange']</code></pre>
+                    </div>
+
+                    <h4>2. insert() - Insert element at specific position</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = ["apple", "banana"]
+fruits.insert(1, "orange")
+print(fruits)  # ['apple', 'orange', 'banana']</code></pre>
+                    </div>
+
+                    <h4>3. remove() - Remove first occurrence of element</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = ["apple", "banana", "orange", "banana"]
+fruits.remove("banana")
+print(fruits)  # ['apple', 'orange', 'banana']</code></pre>
+                    </div>
+
+                    <h4>4. pop() - Remove element at given position</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = ["apple", "banana", "orange"]
+removed_fruit = fruits.pop(1)
+print(fruits)        # ['apple', 'orange']
+print(removed_fruit) # banana</code></pre>
+                    </div>
+
+                    <h4>5. index() - Find index of element</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = ["apple", "banana", "orange"]
+index = fruits.index("banana")
+print(index)  # 1</code></pre>
+                    </div>
+
+                    <h4>6. count() - Count occurrences of element</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">numbers = [1, 2, 3, 2, 2, 4]
+count = numbers.count(2)
+print(count)  # 3</code></pre>
+                    </div>
+
+                    <h4>7. sort() - Sort the list</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">numbers = [3, 1, 4, 1, 5, 9, 2]
+numbers.sort()
+print(numbers)  # [1, 1, 2, 3, 4, 5, 9]
+
+# Sort in reverse order
+numbers.sort(reverse=True)
+print(numbers)  # [9, 5, 4, 3, 2, 1, 1]</code></pre>
+                    </div>
+
+                    <h4>8. reverse() - Reverse the list</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = ["apple", "banana", "orange"]
+fruits.reverse()
+print(fruits)  # ['orange', 'banana', 'apple']</code></pre>
+                    </div>
+
+                    <h3>List Slicing</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(numbers[2:5])    # [2, 3, 4]
+print(numbers[:3])     # [0, 1, 2]
+print(numbers[7:])     # [7, 8, 9]
+print(numbers[::2])    # [0, 2, 4, 6, 8]
+print(numbers[::-1])   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sets Section -->
+            <section id="sets" class="section">
+                <h2>Sets in Python</h2>
+                <div class="content-card">
+                    <p>Set in Python is an unordered collection data type that is iterable, mutable and has no duplicate elements. Sets are represented by { }.</p>
+
+                    <h3>Creating Sets</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Creating a set
+my_set = {"apple", "banana", "cherry"}
+print(my_set)
+print(type(my_set))
+
+# Creating a set from a list (removes duplicates)
+numbers = [1, 2, 3, 2, 1, 4]
+unique_numbers = set(numbers)
+print(unique_numbers)  # {1, 2, 3, 4}</code></pre>
+                        <div class="output">Output: 
+{'apple', 'banana', 'cherry'}
+&lt;class 'set'&gt;
+{1, 2, 3, 4}</div>
+                    </div>
+
+                    <h3>Set Methods</h3>
+                    
+                    <h4>1. add() - Add an element</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = {"apple", "banana"}
+fruits.add("orange")
+print(fruits)  # {'apple', 'banana', 'orange'}</code></pre>
+                    </div>
+
+                    <h4>2. remove() and discard()</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = {"apple", "banana", "orange"}
+
+# remove() - raises error if element not found
+fruits.remove("banana")
+print(fruits)  # {'apple', 'orange'}
+
+# discard() - does not raise error if element not found
+fruits.discard("grape")  # No error
+print(fruits)  # {'apple', 'orange'}</code></pre>
+                    </div>
+
+                    <h4>3. Set Operations</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+# Union
+print(set1 | set2)          # {1, 2, 3, 4, 5, 6}
+print(set1.union(set2))     # {1, 2, 3, 4, 5, 6}
+
+# Intersection
+print(set1 & set2)              # {3, 4}
+print(set1.intersection(set2))  # {3, 4}
+
+# Difference
+print(set1 - set2)              # {1, 2}
+print(set1.difference(set2))    # {1, 2}
+
+# Symmetric Difference
+print(set1 ^ set2)                      # {1, 2, 5, 6}
+print(set1.symmetric_difference(set2))  # {1, 2, 5, 6}</code></pre>
+                    </div>
+
+                    <h3>Frozen Set</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Frozen set - immutable set
+numbers = [1, 2, 3, 2, 1, 4]
+frozen_set = frozenset(numbers)
+print(frozen_set)  # frozenset({1, 2, 3, 4})
+print(type(frozen_set))  # &lt;class 'frozenset'&gt;</code></pre>
+                    </div>
+
+                    <div class="note-box">
+                        <p>Since sets are unordered, we can't access items using indexes like we do in lists.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dictionaries Section -->
+            <section id="dictionaries" class="section">
+                <h2>Dictionaries & Methods</h2>
+                <div class="content-card">
+                    <p>Dictionary is a collection of key-value pairs, used to store data values like a map, which, unlike other Data Types that hold only a single value as an element.</p>
+
+                    <h3>Creating Dictionaries</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Creating a dictionary
+student = {"name": "John", "age": 21, "grade": "A"}
+print(student)
+
+# Creating dictionary using dict() constructor
+person = dict(name="Alice", age=25, city="New York")
+print(person)</code></pre>
+                        <div class="output">Output: 
+{'name': 'John', 'age': 21, 'grade': 'A'}
+{'name': 'Alice', 'age': 25, 'city': 'New York'}</div>
+                    </div>
+
+                    <h3>Accessing Dictionary Elements</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">student = {"name": "John", "age": 21, "grade": "A"}
+
+# Using square brackets
+print(student["name"])     # John
+
+# Using get() method (safer)
+print(student.get("age"))  # 21
+print(student.get("city")) # None
+print(student.get("city", "Unknown"))  # Unknown</code></pre>
+                    </div>
+
+                    <h3>Dictionary Methods</h3>
+                    
+                    <h4>1. Adding/Updating Elements</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">student = {"name": "John", "age": 21}
+
+# Adding new key-value pair
+student["grade"] = "A"
+print(student)  # {'name': 'John', 'age': 21, 'grade': 'A'}
+
+# Updating existing value
+student["age"] = 22
+print(student)  # {'name': 'John', 'age': 22, 'grade': 'A'}
+
+# Using update() method
+student.update({"city": "Boston", "major": "CS"})
+print(student)</code></pre>
+                    </div>
+
+                    <h4>2. keys(), values(), items()</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">student = {"name": "John", "age": 21, "grade": "A"}
+
+# Get all keys
+print(student.keys())    # dict_keys(['name', 'age', 'grade'])
+
+# Get all values
+print(student.values())  # dict_values(['John', 21, 'A'])
+
+# Get all key-value pairs
+print(student.items())   # dict_items([('name', 'John'), ('age', 21), ('grade', 'A')])</code></pre>
+                    </div>
+
+                    <h4>3. pop() and popitem()</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">student = {"name": "John", "age": 21, "grade": "A"}
+
+# Remove specific key and return its value
+age = student.pop("age")
+print(age)      # 21
+print(student)  # {'name': 'John', 'grade': 'A'}
+
+# Remove and return arbitrary key-value pair
+item = student.popitem()
+print(item)     # ('grade', 'A')
+print(student)  # {'name': 'John'}</code></pre>
+                    </div>
+
+                    <h4>4. Dictionary Comprehension</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Creating dictionary using comprehension
+squares = {x: x**2 for x in range(1, 6)}
+print(squares)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# Dictionary comprehension with condition
+even_squares = {x: x**2 for x in range(1, 11) if x % 2 == 0}
+print(even_squares)  # {2: 4, 4: 16, 6: 36, 8: 64, 10: 100}</code></pre>
+                    </div>
+
+                    <h3>Iterating Through Dictionaries</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">student = {"name": "John", "age": 21, "grade": "A"}
+
+# Iterate through keys
+for key in student:
+    print(key, ":", student[key])
+
+# Iterate through key-value pairs
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# Iterate through values only
+for value in student.values():
+    print(value)</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tuples Section -->
+            <section id="tuples" class="section">
+                <h2>Tuples</h2>
+                <div class="content-card">
+                    <p>Python Tuple is a collection of objects separated by commas. In some ways, a tuple is similar to a list in terms of indexing, nested objects, and repetition but a tuple is immutable, unlike lists which are mutable.</p>
+
+                    <h3>Creating Tuples</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Creating a tuple
+coordinates = (10, 20)
+print(coordinates)
+print(type(coordinates))
+
+# Creating tuple without parentheses
+point = 5, 10, 15
+print(point)
+print(type(point))
+
+# Creating tuple with one element (note the comma)
+single_item = (5,)
+print(single_item)
+print(type(single_item))</code></pre>
+                        <div class="output">Output: 
+(10, 20)
+&lt;class 'tuple'&gt;
+(5, 10, 15)
+&lt;class 'tuple'&gt;
+(5,)
+&lt;class 'tuple'&gt;</div>
+                    </div>
+
+                    <h3>Accessing Tuple Elements</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">fruits = ("apple", "banana", "cherry", "date")
+
+# Positive indexing
+print(fruits[0])   # apple
+print(fruits[2])   # cherry
+
+# Negative indexing
+print(fruits[-1])  # date
+print(fruits[-2])  # cherry
+
+# Slicing
+print(fruits[1:3])  # ('banana', 'cherry')
+print(fruits[:2])   # ('apple', 'banana')
+print(fruits[2:])   # ('cherry', 'date')</code></pre>
+                    </div>
+
+                    <h3>Tuple Methods</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">numbers = (1, 2, 3, 2, 4, 2, 5)
+
+# count() - Count occurrences of a value
+count_2 = numbers.count(2)
+print(count_2)  # 3
+
+# index() - Find index of first occurrence
+index_3 = numbers.index(3)
+print(index_3)  # 2
+
+# len() - Get length of tuple
+length = len(numbers)
+print(length)   # 7</code></pre>
+                    </div>
+
+                    <h3>Tuple Unpacking</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Tuple unpacking
+point = (10, 20, 30)
+x, y, z = point
+print(f"x: {x}, y: {y}, z: {z}")
+
+# Swapping variables using tuples
+a = 5
+b = 10
+a, b = b, a
+print(f"a: {a}, b: {b}")  # a: 10, b: 5
+
+# Function returning multiple values
+def get_name_age():
+    return "Alice", 25
+
+name, age = get_name_age()
+print(f"Name: {name}, Age: {age}")</code></pre>
+                    </div>
+
+                    <h3>Built-in Functions with Tuples</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">numbers = (4, 1, 7, 2, 9, 3)
+
+print(max(numbers))     # 9
+print(min(numbers))     # 1
+print(sum(numbers))     # 26
+print(sorted(numbers))  # [1, 2, 3, 4, 7, 9] (returns a list)
+
+# Converting tuple to list and vice versa
+tuple_to_list = list(numbers)
+print(tuple_to_list)    # [4, 1, 7, 2, 9, 3]
+
+list_to_tuple = tuple(tuple_to_list)
+print(list_to_tuple)    # (4, 1, 7, 2, 9, 3)</code></pre>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Key Difference:</strong> Tuples are immutable, meaning once created, you cannot change, add, or remove elements.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strings Section -->
+            <section id="strings" class="section">
+                <h2>String Operations</h2>
+                <div class="content-card">
+                    <h3>Creating Strings</h3>
+                    <p>Strings in Python can be created using single, double or even triple quotes.</p>
+
+                    <div class="example-box">
+                        <pre><code class="language-python"># Different ways to create strings
+single_quote = 'Hello World'
+double_quote = "Hello World"
+triple_quote = """Hello World"""
+multiline = """This is a
+multiline string"""
+
+print(single_quote)
+print(double_quote)
+print(triple_quote)
+print(multiline)</code></pre>
+                    </div>
+
+                    <h3>String Indexing and Slicing</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">text = "Python Programming"
+
+# Indexing
+print(text[0])    # P
+print(text[7])    # P
+print(text[-1])   # g
+
+# Slicing
+print(text[0:6])    # Python
+print(text[7:])     # Programming
+print(text[:6])     # Python
+print(text[::2])    # Pto rgamn
+print(text[::-1])   # gnimmargorP nohtyP</code></pre>
+                    </div>
+
+                    <h3>String Methods</h3>
+                    
+                    <h4>1. Case Methods</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">text = "Hello World"
+
+print(text.lower())      # hello world
+print(text.upper())      # HELLO WORLD
+print(text.title())      # Hello World
+print(text.capitalize()) # Hello world
+print(text.swapcase())   # hELLO wORLD</code></pre>
+                    </div>
+
+                    <h4>2. Search and Check Methods</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">text = "Python Programming"
+
+print(text.find("Pro"))      # 7
+print(text.index("Pro"))     # 7
+print(text.count("o"))       # 2
+print(text.startswith("Py")) # True
+print(text.endswith("ing"))  # True
+print("Prog" in text)        # True</code></pre>
+                    </div>
+
+                    <h4>3. Modification Methods</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">text = "  Hello World  "
+
+print(text.strip())           # "Hello World"
+print(text.replace("World", "Python"))  # "  Hello Python  "
+
+# Split and Join
+sentence = "apple,banana,cherry"
+fruits = sentence.split(",")
+print(fruits)                 # ['apple', 'banana', 'cherry']
+
+joined = " - ".join(fruits)
+print(joined)                 # "apple - banana - cherry"</code></pre>
+                    </div>
+
+                    <h4>4. String Formatting</h4>
+                    <div class="example-box">
+                        <pre><code class="language-python">name = "Alice"
+age = 25
+grade = 85.7
+
+# Old style formatting
+print("Name: %s, Age: %d" % (name, age))
+
+# .format() method
+print("Name: {}, Age: {}".format(name, age))
+print("Name: {0}, Age: {1}, Grade: {2:.1f}".format(name, age, grade))
+
+# f-strings (Python 3.6+)
+print(f"Name: {name}, Age: {age}")
+print(f"Name: {name}, Age: {age}, Grade: {grade:.1f}")
+
+# Advanced f-string formatting
+print(f"Grade: {grade:>10.2f}")  # Right-aligned, 2 decimal places</code></pre>
+                    </div>
+
+                    <h3>Escape Sequences</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Common escape sequences
+print("Hello\nWorld")      # New line
+print("Hello\tWorld")      # Tab
+print("He said \"Hello\"") # Double quote
+print('It\'s a nice day')  # Single quote
+print("Path: C:\\Users")   # Backslash
+
+# Raw strings (ignore escape sequences)
+print(r"C:\Users\name\Documents")</code></pre>
+                    </div>
+
+                    <h3>String Validation Methods</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">print("123".isdigit())      # True
+print("abc".isalpha())       # True
+print("abc123".isalnum())    # True
+print("   ".isspace())       # True
+print("Hello World".istitle()) # True
+print("HELLO".isupper())     # True
+print("hello".islower())     # True</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- List Comprehensions Section -->
+            <section id="list-comprehensions" class="section">
+                <h2>List Comprehensions</h2>
+                <div class="content-card">
+                    <p>List comprehension provides a concise way to create lists. It consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses.</p>
+
+                    <h3>Basic Syntax</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Syntax: [expression for item in iterable]
+# Syntax with condition: [expression for item in iterable if condition]</code></pre>
+                    </div>
+
+                    <h3>Basic List Comprehension</h3>
+                    <div class="example-box">
+                        <h4>Traditional approach vs List Comprehension:</h4>
+                        <pre><code class="language-python"># Traditional approach
+squares = []
+for x in range(10):
+    squares.append(x**2)
+print(squares)
+
+# Using list comprehension
+squares = [x**2 for x in range(10)]
+print(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
+                    </div>
+
+                    <h3>List Comprehension with Conditions</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Even numbers from 0 to 19
+evens = [x for x in range(20) if x % 2 == 0]
+print(evens)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+# Squares of even numbers
+even_squares = [x**2 for x in range(10) if x % 2 == 0]
+print(even_squares)  # [0, 4, 16, 36, 64]
+
+# Filter words with length > 3
+words = ["cat", "dog", "elephant", "lion", "tiger"]
+long_words = [word for word in words if len(word) > 3]
+print(long_words)  # ['elephant', 'lion', 'tiger']</code></pre>
+                    </div>
+
+                    <h3>Nested List Comprehensions</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Create a 3x3 matrix
+matrix = [[i*j for j in range(3)] for i in range(3)]
+print(matrix)  # [[0, 0, 0], [0, 1, 2], [0, 2, 4]]
+
+# Flatten a 2D list
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(flattened)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+                    </div>
+
+                    <h3>Dictionary and Set Comprehensions</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Dictionary comprehension
+squares_dict = {x: x**2 for x in range(5)}
+print(squares_dict)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Set comprehension
+unique_lengths = {len(word) for word in ["hello", "world", "python", "code"]}
+print(unique_lengths)  # {4, 5, 6}
+
+# Dictionary comprehension with condition
+even_squares_dict = {x: x**2 for x in range(10) if x % 2 == 0}
+print(even_squares_dict)  # {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}</code></pre>
+                    </div>
+
+                    <h3>Advanced Examples</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python"># Multiple conditions
+numbers = [x for x in range(100) if x % 2 == 0 if x % 5 == 0]
+print(numbers[:5])  # [0, 10, 20, 30, 40]
+
+# Using functions in list comprehension
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+primes = [x for x in range(2, 20) if is_prime(x)]
+print(primes)  # [2, 3, 5, 7, 11, 13, 17, 19]
+
+# Working with strings
+sentence = "Hello World Python"
+vowels = [char for char in sentence.lower() if char in 'aeiou']
+print(vowels)  # ['e', 'o', 'o', 'o']</code></pre>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Performance Note:</strong> List comprehensions are generally faster than equivalent for loops because they are optimized at the C level.
+                    </div>
+                </div>
+            </section>
+
+            <!-- OOP Section -->
+            <section id="oop" class="section">
+                <h2>Object-Oriented Programming</h2>
+                <div class="content-card">
+                    <p>OOPs is a programming paradigm that uses objects and classes in programming. It aims to implement real-world entities like inheritance, polymorphisms, encapsulation, etc. in the programming. The main concept of OOPs is to bind the data and the functions that work on together as a single unit so that no other part of the code can access this data.</p>
+
+                    <h3>Main Concepts of OOPs:</h3>
+                    <ul>
+                        <li><strong>Class</strong> - Blueprint for creating objects</li>
+                        <li><strong>Objects</strong> - Instances of a class</li>
+                        <li><strong>Inheritance</strong> - Acquiring properties from parent class</li>
+                        <li><strong>Polymorphism</strong> - Same interface, different implementations</li>
+                        <li><strong>Encapsulation</strong> - Bundling data and methods</li>
+                        <li><strong>Abstraction</strong> - Hiding complex implementation details</li>
+                    </ul>
+
+                    <h3>Class</h3>
+                    <p>A class is a collection of objects. A class contains the blueprints or the prototype from which the objects are being created. It is a logical entity that contains some attributes and methods.</p>
+
+                    <div class="example-box">
+                        <h4>Class Syntax:</h4>
+                        <pre><code class="language-python">class ClassName:
+    # Class attributes
+    # Methods</code></pre>
+                    </div>
+
+                    <h3>Objects</h3>
+                    <p>Object is an entity that has a state and behavior associated with it. It may be any real-world object like a mouse, keyboard, chair, table, pen, etc.</p>
+
+                    <div class="example-box">
+                        <h4>Simple Class Example:</h4>
+                        <pre><code class="language-python">class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print(f"Hi, I'm {self.name} and I'm {self.age} years old")
+
+# Creating an object
+person1 = Person("Alice", 25)
+person1.introduce()</code></pre>
+                        <div class="output">Output: Hi, I'm Alice and I'm 25 years old</div>
+                    </div>
+
+                    <h3>The self Parameter</h3>
+                    <p>Class methods must have an extra first parameter in the method definition. We do not give a value for this parameter when we call the method, Python provides it.</p>
+                    
+                    <div class="example-box">
+                        <pre><code class="language-python">class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def display_info(self):
+        print(f"This is a {self.brand} {self.model}")
+
+car1 = Car("Toyota", "Camry")
+car2 = Car("Honda", "Civic")
+
+car1.display_info()  # This is a Toyota Camry
+car2.display_info()  # This is a Honda Civic</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Classes and Objects Section -->
+            <section id="classes-objects" class="section">
+                <h2>Classes & Objects</h2>
+                <div class="content-card">
+                    <h3>Class and Instance Attributes</h3>
+                    
+                    <div class="example-box">
+                        <h4>Class Attributes vs Instance Attributes:</h4>
+                        <pre><code class="language-python">class Student:
+    # Class attribute
+    school = "ABC High School"
+    total_students = 0
+    
+    def __init__(self, name, grade):
+        # Instance attributes
+        self.name = name
+        self.grade = grade
+        Student.total_students += 1
+    
+    def display_info(self):
+        print(f"Name: {self.name}, Grade: {self.grade}, School: {self.school}")
+
+# Creating objects
+student1 = Student("Alice", "A")
+student2 = Student("Bob", "B")
+
+student1.display_info()
+student2.display_info()
+
+print(f"Total students: {Student.total_students}")
+print(f"School: {Student.school}")</code></pre>
+                        <div class="output">Output: 
+Name: Alice, Grade: A, School: ABC High School
+Name: Bob, Grade: B, School: ABC High School
+Total students: 2
+School: ABC High School</div>
+                    </div>
+
+                    <h3>Instance Methods, Class Methods, and Static Methods</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class MathOperations:
+    pi = 3.14159
+    
+    def __init__(self, number):
+        self.number = number
+    
+    # Instance method
+    def square(self):
+        return self.number ** 2
+    
+    # Class method
+    @classmethod
+    def circle_area(cls, radius):
+        return cls.pi * radius ** 2
+    
+    # Static method
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+# Using the class
+math_obj = MathOperations(5)
+print(math_obj.square())              # 25
+
+print(MathOperations.circle_area(3))  # 28.27431
+print(MathOperations.add(10, 20))     # 30</code></pre>
+                    </div>
+
+                    <h3>Property Decorators</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Circle:
+    def __init__(self, radius):
+        self._radius = radius
+    
+    @property
+    def radius(self):
+        return self._radius
+    
+    @radius.setter
+    def radius(self, value):
+        if value < 0:
+            raise ValueError("Radius cannot be negative")
+        self._radius = value
+    
+    @property
+    def area(self):
+        return 3.14159 * self._radius ** 2
+    
+    @property
+    def circumference(self):
+        return 2 * 3.14159 * self._radius
+
+# Using the class
+circle = Circle(5)
+print(f"Radius: {circle.radius}")
+print(f"Area: {circle.area:.2f}")
+print(f"Circumference: {circle.circumference:.2f}")
+
+circle.radius = 7
+print(f"New area: {circle.area:.2f}")</code></pre>
+                    </div>
+
+                    <h3>Special Methods (Magic Methods)</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    
+    def __str__(self):
+        return f"{self.title} by {self.author}"
+    
+    def __repr__(self):
+        return f"Book('{self.title}', '{self.author}', {self.pages})"
+    
+    def __len__(self):
+        return self.pages
+    
+    def __eq__(self, other):
+        if isinstance(other, Book):
+            return self.title == other.title and self.author == other.author
+        return False
+
+book1 = Book("1984", "George Orwell", 328)
+book2 = Book("1984", "George Orwell", 328)
+
+print(book1)          # 1984 by George Orwell
+print(repr(book1))    # Book('1984', 'George Orwell', 328)
+print(len(book1))     # 328
+print(book1 == book2) # True</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inheritance Section -->
+            <section id="inheritance" class="section">
+                <h2>Inheritance</h2>
+                <div class="content-card">
+                    <p>It is the capability of one class to derive or inherit the properties from another class. The class that derives properties is called the derived class or child class and the class from which the properties are being derived is called the base class or parent class.</p>
+
+                    <h3>Benefits of Inheritance:</h3>
+                    <ul>
+                        <li>It represents real-world relationships well.</li>
+                        <li>It provides the reusability of a code. We don't have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.</li>
+                        <li>It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.</li>
+                    </ul>
+
+                    <h3>Single Inheritance</h3>
+                    <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+    
+    def eat(self):
+        print(f"{self.name} is eating")
+    
+    def sleep(self):
+        print(f"{self.name} is sleeping")
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name, "Canine")
+        self.breed = breed
+    
+    def bark(self):
+        print(f"{self.name} is barking")
+
+# Creating an object
+dog = Dog("Buddy", "Golden Retriever")
+dog.eat()    # Inherited method
+dog.sleep()  # Inherited method
+dog.bark()   # Dog-specific method
+
+print(f"Name: {dog.name}, Species: {dog.species}, Breed: {dog.breed}")</code></pre>
+                        <div class="output">Output: 
+Buddy is eating
+Buddy is sleeping
+Buddy is barking
+Name: Buddy, Species: Canine, Breed: Golden Retriever</div>
+                    </div>
+
+                    <h3>Multiple Inheritance</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Flyable:
+    def fly(self):
+        print("Flying in the sky")
+
+class Swimmable:
+    def swim(self):
+        print("Swimming in water")
+
+class Duck(Animal, Flyable, Swimmable):
+    def __init__(self, name):
+        super().__init__(name, "Bird")
+    
+    def quack(self):
+        print(f"{self.name} is quacking")
+
+# Creating an object
+duck = Duck("Donald")
+duck.eat()   # From Animal
+duck.fly()   # From Flyable
+duck.swim()  # From Swimmable
+duck.quack() # Duck-specific method</code></pre>
+                    </div>
+
+                    <h3>Method Overriding</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def start(self):
+        print("Vehicle is starting")
+    
+    def stop(self):
+        print("Vehicle is stopping")
+
+class Car(Vehicle):
+    def start(self):
+        print("Car engine is starting with a key")
+
+class ElectricCar(Vehicle):
+    def start(self):
+        print("Electric car is starting silently")
+
+# Creating objects
+regular_car = Car("Toyota", "Camry")
+electric_car = ElectricCar("Tesla", "Model 3")
+
+regular_car.start()  # Car engine is starting with a key
+electric_car.start() # Electric car is starting silently</code></pre>
+                    </div>
+
+                    <h3>super() Function</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def introduce(self):
+        print(f"I'm {self.name}, {self.age} years old")
+
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)  # Call parent constructor
+        self.student_id = student_id
+    
+    def introduce(self):
+        super().introduce()  # Call parent method
+        print(f"My student ID is {self.student_id}")
+
+student = Student("Alice", 20, "S12345")
+student.introduce()</code></pre>
+                        <div class="output">Output:
+I'm Alice, 20 years old
+My student ID is S12345</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Polymorphism Section -->
+            <section id="polymorphism" class="section">
+                <h2>Polymorphism</h2>
+                <div class="content-card">
+                    <p>Polymorphism means "many forms". In programming, it refers to the ability of a single interface to represent different underlying data types or classes.</p>
+
+                    <h3>Method Overriding (Runtime Polymorphism)</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Shape:
+    def area(self):
+        pass
+    
+    def perimeter(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width
+    
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return 3.14159 * self.radius ** 2
+    
+    def perimeter(self):
+        return 2 * 3.14159 * self.radius
+
+# Polymorphism in action
+shapes = [Rectangle(5, 4), Circle(3), Rectangle(2, 6)]
+
+for shape in shapes:
+    print(f"Area: {shape.area():.2f}")
+    print(f"Perimeter: {shape.perimeter():.2f}")
+    print("-" * 20)</code></pre>
+                    </div>
+
+                    <h3>Duck Typing</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Dog:
+    def make_sound(self):
+        return "Woof!"
+
+class Cat:
+    def make_sound(self):
+        return "Meow!"
+
+class Cow:
+    def make_sound(self):
+        return "Moo!"
+
+def animal_sound(animal):
+    # Duck typing: if it has make_sound method, it's good to go
+    return animal.make_sound()
+
+animals = [Dog(), Cat(), Cow()]
+
+for animal in animals:
+    print(animal_sound(animal))</code></pre>
+                        <div class="output">Output:
+Woof!
+Meow!
+Moo!</div>
+                    </div>
+
+                    <h3>Operator Overloading</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+    
+    def __sub__(self, other):
+        return Vector(self.x - other.x, self.y - other.y)
+    
+    def __mul__(self, scalar):
+        return Vector(self.x * scalar, self.y * scalar)
+    
+    def __str__(self):
+        return f"Vector({self.x}, {self.y})"
+
+v1 = Vector(2, 3)
+v2 = Vector(1, 4)
+
+v3 = v1 + v2  # Uses __add__
+v4 = v1 - v2  # Uses __sub__
+v5 = v1 * 3   # Uses __mul__
+
+print(v3)  # Vector(3, 7)
+print(v4)  # Vector(1, -1)
+print(v5)  # Vector(6, 9)</code></pre>
+                    </div>
+
+                    <h3>Polymorphism with Built-in Functions</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Temperature:
+    def __init__(self, celsius):
+        self.celsius = celsius
+    
+    def __len__(self):
+        return abs(int(self.celsius))
+    
+    def __str__(self):
+        return f"{self.celsius}°C"
+
+temperatures = [Temperature(25), Temperature(-10), Temperature(0)]
+
+for temp in temperatures:
+    print(f"Temperature: {temp}")
+    print(f"Length: {len(temp)}")  # Uses __len__
+    print("-" * 15)</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Encapsulation Section -->
+            <section id="encapsulation" class="section">
+                <h2>Encapsulation</h2>
+                <div class="content-card">
+                    <p>Encapsulation is the bundling of data and methods that work on that data within one unit (class). It also restricts direct access to some of an object's components, which is a means of preventing accidental interference and misuse.</p>
+
+                    <h3>Access Modifiers in Python</h3>
+                    <ul>
+                        <li><strong>Public:</strong> Accessible from anywhere (default)</li>
+                        <li><strong>Protected:</strong> Indicated by single underscore (_), intended for internal use</li>
+                        <li><strong>Private:</strong> Indicated by double underscore (__), name mangling applied</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <h4>Example of Access Modifiers:</h4>
+                        <pre><code class="language-python">class BankAccount:
+    def __init__(self, account_number, balance):
+        self.account_number = account_number    # Public
+        self._bank_name = "ABC Bank"           # Protected
+        self.__balance = balance               # Private
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited ${amount}. New balance: ${self.__balance}")
+        else:
+            print("Invalid deposit amount")
+    
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            print(f"Withdrew ${amount}. New balance: ${self.__balance}")
+        else:
+            print("Invalid withdrawal amount or insufficient funds")
+    
+    def get_balance(self):
+        return self.__balance
+    
+    def _internal_process(self):
+        print("Internal bank processing...")
+
+# Using the class
+account = BankAccount("12345", 1000)
+
+# Public access
+print(account.account_number)  # 12345
+
+# Protected access (convention, still accessible)
+print(account._bank_name)      # ABC Bank
+
+# Private access (name mangling occurs)
+# print(account.__balance)     # This would cause an AttributeError
+
+# Accessing private through methods
+print(account.get_balance())   # 1000
+
+account.deposit(500)
+account.withdraw(200)</code></pre>
+                        <div class="output">Output:
+12345
+ABC Bank
+1000
+Deposited $500. New balance: $1500
+Withdrew $200. New balance: $1300</div>
+                    </div>
+
+                    <h3>Property Decorators for Encapsulation</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.__salary = salary
+    
+    @property
+    def salary(self):
+        return self.__salary
+    
+    @salary.setter
+    def salary(self, value):
+        if value < 0:
+            raise ValueError("Salary cannot be negative")
+        if value > 1000000:
+            raise ValueError("Salary too high, please verify")
+        self.__salary = value
+    
+    @property
+    def annual_salary(self):
+        return self.__salary * 12
+    
+    def __str__(self):
+        return f"Employee: {self.name}, Salary: ${self.__salary}"
+
+# Using the class
+emp = Employee("John Doe", 5000)
+print(emp)  # Employee: John Doe, Salary: $5000
+
+# Using property getter
+print(f"Monthly salary: ${emp.salary}")
+print(f"Annual salary: ${emp.annual_salary}")
+
+# Using property setter
+emp.salary = 5500
+print(f"Updated salary: ${emp.salary}")
+
+# This would raise an error
+# emp.salary = -1000</code></pre>
+                    </div>
+
+                    <h3>Data Validation through Encapsulation</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    @property
+    def length(self):
+        return self.__length
+    
+    @length.setter
+    def length(self, value):
+        if value <= 0:
+            raise ValueError("Length must be positive")
+        self.__length = value
+    
+    @property
+    def width(self):
+        return self.__width
+    
+    @width.setter
+    def width(self, value):
+        if value <= 0:
+            raise ValueError("Width must be positive")
+        self.__width = value
+    
+    @property
+    def area(self):
+        return self.__length * self.__width
+    
+    @property
+    def perimeter(self):
+        return 2 * (self.__length + self.__width)
+
+# Using the class
+rect = Rectangle(5, 3)
+print(f"Area: {rect.area}")
+print(f"Perimeter: {rect.perimeter}")
+
+rect.length = 7
+print(f"New area: {rect.area}")
+
+# This would raise an error
+# rect.width = -2</code></pre>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Note:</strong> Python doesn't have true private members. The double underscore naming is a convention that triggers name mangling, making the attribute harder to access accidentally.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abstraction Section -->
+            <section id="abstraction" class="section">
+                <h2>Abstraction</h2>
+                <div class="content-card">
+                    <p>Abstraction is the process of hiding the complex implementation details while showing only the essential features of an object. It allows you to focus on what an object does rather than how it does it.</p>
+
+                    <h3>Abstract Base Classes (ABC)</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+    
+    @abstractmethod
+    def perimeter(self):
+        pass
+    
+    def description(self):
+        return "This is a geometric shape"
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width
+    
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return 3.14159 * self.radius ** 2
+    
+    def perimeter(self):
+        return 2 * 3.14159 * self.radius
+
+# Cannot instantiate abstract class
+# shape = Shape()  # This would raise TypeError
+
+# Can instantiate concrete classes
+rectangle = Rectangle(5, 4)
+circle = Circle(3)
+
+print(f"Rectangle area: {rectangle.area()}")
+print(f"Circle area: {circle.area():.2f}")
+print(rectangle.description())
+print(circle.description())</code></pre>
+                        <div class="output">Output:
+Rectangle area: 20
+Circle area: 28.27
+This is a geometric shape
+This is a geometric shape</div>
+                    </div>
+
+                    <h3>Interface-like Behavior</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">from abc import ABC, abstractmethod
+
+class Drawable(ABC):
+    @abstractmethod
+    def draw(self):
+        pass
+
+class Movable(ABC):
+    @abstractmethod
+    def move(self, x, y):
+        pass
+
+class Button(Drawable, Movable):
+    def __init__(self, text, x=0, y=0):
+        self.text = text
+        self.x = x
+        self.y = y
+    
+    def draw(self):
+        print(f"Drawing button '{self.text}' at ({self.x}, {self.y})")
+    
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+        print(f"Button moved to ({self.x}, {self.y})")
+
+class Icon(Drawable, Movable):
+    def __init__(self, image, x=0, y=0):
+        self.image = image
+        self.x = x
+        self.y = y
+    
+    def draw(self):
+        print(f"Drawing icon '{self.image}' at ({self.x}, {self.y})")
+    
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+        print(f"Icon moved to ({self.x}, {self.y})")
+
+# Using the classes
+button = Button("Click Me", 10, 20)
+icon = Icon("home.png", 50, 60)
+
+button.draw()
+button.move(15, 25)
+
+icon.draw()
+icon.move(55, 65)</code></pre>
+                    </div>
+
+                    <h3>Real-world Example: Payment System</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">from abc import ABC, abstractmethod
+
+class PaymentProcessor(ABC):
+    @abstractmethod
+    def process_payment(self, amount):
+        pass
+    
+    @abstractmethod
+    def verify_payment(self, transaction_id):
+        pass
+    
+    def log_transaction(self, amount, status):
+        print(f"Transaction logged: ${amount} - {status}")
+
+class CreditCardProcessor(PaymentProcessor):
+    def process_payment(self, amount):
+        print(f"Processing credit card payment of ${amount}")
+        # Complex credit card processing logic here
+        return "CC_" + str(hash(amount))
+    
+    def verify_payment(self, transaction_id):
+        print(f"Verifying credit card transaction: {transaction_id}")
+        return True
+
+class PayPalProcessor(PaymentProcessor):
+    def process_payment(self, amount):
+        print(f"Processing PayPal payment of ${amount}")
+        # Complex PayPal processing logic here
+        return "PP_" + str(hash(amount))
+    
+    def verify_payment(self, transaction_id):
+        print(f"Verifying PayPal transaction: {transaction_id}")
+        return True
+
+class BankTransferProcessor(PaymentProcessor):
+    def process_payment(self, amount):
+        print(f"Processing bank transfer of ${amount}")
+        # Complex bank transfer logic here
+        return "BT_" + str(hash(amount))
+    
+    def verify_payment(self, transaction_id):
+        print(f"Verifying bank transfer: {transaction_id}")
+        return True
+
+# Payment system that works with any payment processor
+class PaymentSystem:
+    def __init__(self, processor: PaymentProcessor):
+        self.processor = processor
+    
+    def make_payment(self, amount):
+        transaction_id = self.processor.process_payment(amount)
+        if self.processor.verify_payment(transaction_id):
+            self.processor.log_transaction(amount, "SUCCESS")
+            return True
+        else:
+            self.processor.log_transaction(amount, "FAILED")
+            return False
+
+# Using the system
+credit_card_system = PaymentSystem(CreditCardProcessor())
+paypal_system = PaymentSystem(PayPalProcessor())
+bank_system = PaymentSystem(BankTransferProcessor())
+
+credit_card_system.make_payment(100)
+print("-" * 40)
+paypal_system.make_payment(150)
+print("-" * 40)
+bank_system.make_payment(200)</code></pre>
+                    </div>
+
+                    <h3>Template Method Pattern</h3>
+                    <div class="example-box">
+                        <pre><code class="language-python">from abc import ABC, abstractmethod
+
+class DataProcessor(ABC):
+    def process(self):
+        """Template method defining the algorithm structure"""
+        data = self.read_data()
+        processed_data = self.process_data(data)
+        self.save_data(processed_data)
+    
+    @abstractmethod
+    def read_data(self):
+        pass
+    
+    @abstractmethod
+    def process_data(self, data):
+        pass
+    
+    @abstractmethod
+    def save_data(self, data):
+        pass
+
+class CSVProcessor(DataProcessor):
+    def read_data(self):
+        print("Reading data from CSV file")
+        return "csv_data"
+    
+    def process_data(self, data):
+        print(f"Processing CSV data: {data}")
+        return f"processed_{data}"
+    
+    def save_data(self, data):
+        print(f"Saving processed data to CSV: {data}")
+
+class JSONProcessor(DataProcessor):
+    def read_data(self):
+        print("Reading data from JSON file")
+        return "json_data"
+    
+    def process_data(self, data):
+        print(f"Processing JSON data: {data}")
+        return f"processed_{data}"
+    
+    def save_data(self, data):
+        print(f"Saving processed data to JSON: {data}")
+
+# Using the processors
+csv_processor = CSVProcessor()
+json_processor = JSONProcessor()
+
+print("CSV Processing:")
+csv_processor.process()
+
+print("\nJSON Processing:")
+json_processor.process()</code></pre>
+                    </div>
+
+                    <div class="note-box">
+                        <strong>Key Benefits of Abstraction:</strong>
+                        <ul>
+                            <li>Reduces complexity by hiding implementation details</li>
+                            <li>Provides a clear contract for subclasses</li>
+                            <li>Enables code reusability and maintainability</li>
+                            <li>Supports polymorphism and loose coupling</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Back to Top Button -->
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Python Tutorial. Design by GR Network.</p>
+        </div>
+    </footer>
+
+   <script src="script.js"></script>
