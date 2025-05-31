@@ -375,7 +375,8 @@
         }
 
         /* Footer */
-        .footer {
+    
+   .footer {
             background: #2d3748;
             color: white;
             text-align: center;
@@ -385,6 +386,10 @@
 
         .footer-content p {
             margin: 0;
+        }
+
+        .gr-font {
+            font-family: 'Work Sans';
         }
 
         /* Responsive Design */
