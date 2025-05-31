@@ -205,10 +205,10 @@ print(type(c))    # complex
 print(type(d))    # str
 print(type(e))    # bool</code></pre>
                         <div class="output">Output:
-&lt;class 'int'&gt;
-&lt;class 'float'&gt;
-&lt;class 'complex'&gt;
-&lt;class 'str'&gt;
+&lt;class 'int'&gt;<br>
+&lt;class 'float'&gt;,<br>
+&lt;class 'complex'&gt;<br>
+&lt;class 'str'&gt;<br>
 &lt;class 'bool'&gt;</div>
                     </div>
                 </div>
@@ -235,10 +235,10 @@ print("datatype of num_float:", type(num_float))
 print("Value of num_new:", num_new)
 print("datatype of num_new:", type(num_new))</code></pre>
                         <div class="output">Output:
-datatype of num_int: &lt;class 'int'&gt;
-datatype of num_float: &lt;class 'float'&gt;
-Value of num_new: 124.23
-datatype of num_new: &lt;class 'float'&gt;</div>
+datatype of num_int: &lt;class 'int'&gt;<br>
+datatype of num_float: &lt;class 'float'&gt;<br>
+Value of num_new: 124.23<br>
+datatype of num_new: &lt;class 'float'&gt;</div><br>
                     </div>
 
                     <h4>2. Explicit Type Conversion</h4>
@@ -266,9 +266,9 @@ text = "hello"
 list_val = list(text)
 print(list_val, type(list_val))</code></pre>
                         <div class="output">Output:
-123 &lt;class 'int'&gt;
-10.0 &lt;class 'float'&gt;
-456 &lt;class 'str'&gt;
+123 &lt;class 'int'&gt; <br>
+10.0 &lt;class 'float'&gt;<br>
+456 &lt;class 'str'&gt;<br>
 ['h', 'e', 'l', 'l', 'o'] &lt;class 'list'&gt;</div>
                     </div>
 
@@ -290,8 +290,8 @@ print(list_val, type(list_val))</code></pre>
 print("Welcome " + name)</code></pre>
                         <div class="output">
                             <strong>Output:</strong><br>
-                            <span>Enter the name: <em>Shivani</em></span><br>
-                            <span>Welcome Shivani</span>
+                            <span>Enter the name: <em>Surya</em></span><br>
+                            <span>Welcome Surya</span>
                         </div>
                     </div>
 
@@ -378,6 +378,7 @@ print("This is a sample program")</code></pre>
                     </ul>
 
                     <h3>If Statement</h3>
+                    <p>The if statement is used to execute a block of code only if a specified condition is true.</p>
                     <div class="example-box">
                         <h4>Syntax:</h4>
                         <pre><code class="language-python">if condition:           
@@ -395,6 +396,7 @@ Program ended</div>
                     </div>
 
                     <h3>If-else Statement</h3>
+                    <p>The if-else statement provides an alternative block that runs when the condition is false.</p>
                     <div class="example-box">
                         <h4>Syntax:</h4>
                         <pre><code class="language-python">if condition:
@@ -417,7 +419,39 @@ else:
                         </div>
                     </div>
 
+                <h3>Nested if Statement</h3>
+                <p>A nested if is an if statement inside another if or else block. It’s used for checking multiple conditions in a structured way.</p>
+                <div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">if condition1:
+    if condition2:
+        # runs if both condition1 and condition2 are True</code></pre>
+                 </div>
+
+              <div class="example-box">
+                        <h4>Example:</h4>
+                        <pre><code class="language-python">x = 10
+if x > 0:
+if x % 2 == 0:
+print("x is a positive even number")</code></pre>
+
+ </div>
+
+
+
                     <h3>if-elif-else statement</h3>
+                    <p>The if-elif (else if) statement is used to check multiple conditions, one after another.
+
+</p><div class="example-box">
+                        <h4>Syntax:</h4>
+                        <pre><code class="language-python">if condition1:
+    # runs if condition1 is True
+elif condition2:
+    # runs if condition2 is True
+else:
+    # runs if none of the above conditions are True
+
+                            </code></pre></div>
                     <div class="example-box">
                         <h4>Example:</h4>
                         <pre><code class="language-python">letter = "A"
@@ -654,16 +688,16 @@ for i in range(2, 4):
         print(f"{i} x {j} = {i * j}")
     print()  # Add blank line</code></pre>
                         <div class="output">Output: 
-Multiplication table for 2:
-2 x 1 = 2
-2 x 2 = 4
-...
-2 x 10 = 20
+Multiplication table for 2:<br>
+2 x 1 = 2<br>
+2 x 2 = 4<br>
+...<br>
+2 x 10 = 20<br>
 
-Multiplication table for 3:
-3 x 1 = 3
-3 x 2 = 6
-...
+Multiplication table for 3:<br>
+3 x 1 = 3<br>
+3 x 2 = 6<br>
+...<br>
 3 x 10 = 30</div>
                     </div>
 
@@ -674,11 +708,11 @@ for i in range(1, 6):
     for j in range(i):
         print("*", end=" ")
     print()  # New line after each row</code></pre>
-                        <div class="output">Output:
-* 
-* * 
-* * * 
-* * * * 
+                        <div class="output">Output:<br>
+* <br>
+* * <br>
+* * * <br>
+* * * * <br>
 * * * * *</div>
                     </div>
 
@@ -711,9 +745,9 @@ for i in range(1, 6):
     print(i)
     if i == 2:
         break</code></pre>
-                        <div class="output">Output: 
-0
-1
+                        <div class="output">Output: <br>
+0<br>
+1<br>
 2</div>
                     </div>
 
@@ -726,9 +760,9 @@ for letter in s:
         break
 
 print("Out of for loop")</code></pre>
-                        <div class="output">Output: 
-g
-e
+                        <div class="output">Output: <br>
+g<br>
+e<br>
 Out of for loop</div>
                     </div>
 
@@ -741,17 +775,17 @@ Out of for loop</div>
     if val == "s":
         continue
     print(val)</code></pre>
-                        <div class="output">Output: 
-G
-e
-e
-k
-f
-o
-r
-G
-e
-e
+                        <div class="output">Output: <br>
+G<br>
+e<br>
+e<br>
+k<br>
+f<br>
+o<br>
+r<br>
+G<br>
+e<br>
+e<br>
 k</div>
                     </div>
 
@@ -860,8 +894,8 @@ greet()  # Calling the function</code></pre>
 
 evenOdd(2)
 evenOdd(3)</code></pre>
-                        <div class="output">Output: 
-even
+                        <div class="output">Output: <br>
+even<br>
 odd</div>
                     </div>
 
@@ -906,8 +940,8 @@ print(add_numbers(5, 3, 2))     # 10</code></pre>
 
 evenOdd(2)
 evenOdd(3)</code></pre>
-                        <div class="output">Output: 
-even
+                        <div class="output">Output: <br>
+even<br>
 odd</div>
                     </div>
 
@@ -934,8 +968,8 @@ print(lst)</code></pre>
 num = 10
 modify_number(num)
 print("Outside function:", num)</code></pre>
-                        <div class="output">Output:
-Inside function: 20
+                        <div class="output">Output: <br>
+Inside function: 20 <br>
 Outside function: 10</div>
                     </div>
                 </div>
@@ -957,10 +991,10 @@ Outside function: 10</div>
 
 myFun(10)
 myFun(10, 20)</code></pre>
-                        <div class="output">Output: 
-x: 10
-y: 50
-x: 10
+                        <div class="output">Output: <br>
+x: 10 <br>
+y: 50 <br>
+x: 10 <br>
 y: 20</div>
                     </div>
 
@@ -974,7 +1008,7 @@ y: 20</div>
 student(firstname='Geeks', lastname='Practice')
 student(lastname='for', firstname='Geeks')</code></pre>
                         <div class="output">Output: 
-Geeks Practice
+Geeks Practice<br>
 Geeks for</div>
                     </div>
 
@@ -1003,9 +1037,9 @@ GeeksforGeeks</div>
         print(f"{key}: {value}")
 
 myFun(first='Geeks', mid='for', last='Geeks')</code></pre>
-                        <div class="output">Output:
-first: Geeks
-mid: for
+                        <div class="output">Output: <br>
+first: Geeks <br>
+mid: for <br>
 last: Geeks</div>
                     </div>
 
@@ -1049,8 +1083,8 @@ print(create_profile("Alice", age=30, city="New York"))
 
 print(square_value(2))
 print(square_value(-4))</code></pre>
-                        <div class="output">Output: 
-4
+                        <div class="output">Output:  <br>
+4 <br>
 16</div>
                     </div>
 
@@ -1068,8 +1102,8 @@ print(result)  # (15, 5, 50)
 # Unpacking the returned values
 add, sub, mul = calculate(10, 5)
 print(f"Addition: {add}, Subtraction: {sub}, Multiplication: {mul}")</code></pre>
-                        <div class="output">Output:
-(15, 5, 50)
+                        <div class="output">Output: <br>
+(15, 5, 50) <br>
 Addition: 15, Subtraction: 5, Multiplication: 50</div>
                     </div>
 
@@ -1117,9 +1151,9 @@ print("Fruits list:", fruits)
 # Creating a list with mixed data types
 mixed_list = [1, "hello", 3.14, True]
 print("Mixed list:", mixed_list)</code></pre>
-                        <div class="output">Output: 
-Empty list: []
-Fruits list: ['apple', 'banana', 'cherry']
+                        <div class="output">Output: <br>
+Empty list: [] <br>
+Fruits list: ['apple', 'banana', 'cherry'] <br>
 Mixed list: [1, 'hello', 3.14, True]</div>
                     </div>
 
@@ -1216,9 +1250,9 @@ print(type(my_set))
 numbers = [1, 2, 3, 2, 1, 4]
 unique_numbers = set(numbers)
 print(unique_numbers)  # {1, 2, 3, 4}</code></pre>
-                        <div class="output">Output: 
-{'apple', 'banana', 'cherry'}
-&lt;class 'set'&gt;
+                        <div class="output">Output: <br>
+{'apple', 'banana', 'cherry'} <br>
+&lt;class 'set'&gt; <br>
 {1, 2, 3, 4}</div>
                     </div>
 
@@ -1296,8 +1330,8 @@ print(student)
 # Creating dictionary using dict() constructor
 person = dict(name="Alice", age=25, city="New York")
 print(person)</code></pre>
-                        <div class="output">Output: 
-{'name': 'John', 'age': 21, 'grade': 'A'}
+                        <div class="output">Output:  <br>
+{'name': 'John', 'age': 21, 'grade': 'A'} <br>
 {'name': 'Alice', 'age': 25, 'city': 'New York'}</div>
                     </div>
 
@@ -1415,11 +1449,11 @@ single_item = (5,)
 print(single_item)
 print(type(single_item))</code></pre>
                         <div class="output">Output: 
-(10, 20)
-&lt;class 'tuple'&gt;
-(5, 10, 15)
-&lt;class 'tuple'&gt;
-(5,)
+(10, 20) <br>
+&lt;class 'tuple'&gt; <br>
+(5, 10, 15) <br> 
+&lt;class 'tuple'&gt; <br>
+(5,) <br>
 &lt;class 'tuple'&gt;</div>
                     </div>
 
@@ -1767,9 +1801,9 @@ print(vowels)  # ['e', 'o', 'o', 'o']</code></pre>
         print(f"Hi, I'm {self.name} and I'm {self.age} years old")
 
 # Creating an object
-person1 = Person("Alice", 25)
+person1 = Person("Surya", 23)
 person1.introduce()</code></pre>
-                        <div class="output">Output: Hi, I'm Alice and I'm 25 years old</div>
+                        <div class="output">Output: Hi, I'm Surya and I'm 23 years old</div>
                     </div>
 
                     <h3>The self Parameter</h3>
@@ -2050,10 +2084,10 @@ class Student(Person):
         super().introduce()  # Call parent method
         print(f"My student ID is {self.student_id}")
 
-student = Student("Alice", 20, "S12345")
+student = Student("Surya", 20, "S12345")
 student.introduce()</code></pre>
                         <div class="output">Output:
-I'm Alice, 20 years old
+I'm Surya, 20 years old
 My student ID is S12345</div>
                     </div>
                 </div>
@@ -2609,9 +2643,12 @@ json_processor.process()</code></pre>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Python Tutorial. Design by GR Network.</p>
-        </div>
+       
+    <div class="footer-content">
+        <p>&copy; 2025 Python Tutorial. Design by <span class="gr-font">GR Network</span>.</p>
+    </div>
+</div>
+
     </footer>
 
    <script src="script.js"></script>
